@@ -1,0 +1,19 @@
+/* Global styles */
+div {
+  margin: 0px;
+}
+
+.total-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .total-content {
+    width: 100%;
+    /* Full width on smaller screens */
+  }
+}

@@ -1,0 +1,21 @@
+.login {
+    text-align: center;
+}
+
+.botao-login {
+    color: white;
+    padding: 15px 40px;
+    border-radius: 3px;
+    background-color: #F89938;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none; 
+    cursor: pointer;
+    margin: 2px 0;
+}
+
+.botao-login:hover{
+    background-color: #be742a;
+    transition: 0.5s;
+}
