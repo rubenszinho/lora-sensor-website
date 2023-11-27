@@ -1,6 +1,8 @@
 /* Global styles */
 div {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .total-content {
@@ -9,11 +11,6 @@ div {
   align-items: center;
   gap: 16px;
   padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .total-content {
-    width: 100%;
-    /* Full width on smaller screens */
-  }
+  max-width: 100vw;
+  overflow-x: hidden;
 }

@@ -1,45 +1,42 @@
-import './Dados.css'
+import { useTheme } from '@mui/material/styles';
+import React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { green, yellow, red, grey } from '@mui/material/colors';
 
 const Dados = (props) => {
+    const theme = useTheme();
 
-    let status = ""
-    let backgroundColorClass = ""
+    let status;
+    let color;
 
-    if (props.dados <= 40){
-        status = "Normal"
-        backgroundColorClass = '#3FA50F';
-    }
-    else if (props.dados <= 100){
-        status = "Preocupante"
-        backgroundColorClass = '#F3F320'
-    }
-    else{
-        status = "Alerta vermelho"
-        backgroundColorClass = '#E63C35'
-    }
-
-    const css = {
-        width: '220px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: '10px',
-        backgroundColor: backgroundColorClass,
-        fontWeight: 'bolder',
-        borderRadius: '5px'
+    if (props.dados == null) {
+        status = "Sensor inativo";
+        color = grey[500];
+    } else if (props.dados <= 200) {
+        status = "Normal";
+        color = green[500];
+    } else if (props.dados <= 250) {
+        status = "Preocupante";
+        color = yellow[800];
+    } else {
+        status = "Alerta vermelho";
+        color = red[500];
     }
 
-
-    return(
-        <div>
-            <div className='sensor-data'>
-                <p>{props.dados}</p>
-            </div>
-            <div style={css}>
-                <p>{status}</p>
-            </div>
-        </div>
+    return (
+        <Card sx={{ width: '100%', bgcolor: theme.palette.primary.main }}>
+            <CardContent sx={{ bgcolor: color }}>
+                <Typography variant="h5" component="div" color="white">
+                    {status}
+                </Typography>
+                <Typography sx={{ fontSize: 20 }} color="white" gutterBottom>
+                    {props.dados != null ? `Nível de Risco: ${props.dados}` : "Dados não disponíveis"}
+                </Typography>
+            </CardContent>
+        </Card>
     );
-}
+};
 
-export default Dados
+export default Dados;
