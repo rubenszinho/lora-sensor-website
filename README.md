@@ -1,28 +1,30 @@
-# Sistema de Monitoramento do Nível de Água Baseado em LoRa
+<kbd>[<img title="Português (Brasil)" alt="Português (Brasil)" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](README.pt_br.md)</kbd>
 
-## Visão Geral do Projeto
+# LoRa-Based Water Level Monitoring System
 
-Este projeto foi desenvolvido com o objetivo de monitorar em tempo real o nível de água em rios urbanos, utilizando a tecnologia LoRa para a transmissão de dados. A solução é conteinerizada, o que garante portabilidade e facilidade de implantação em diferentes ambientes.
+## Project Overview
 
-O front-end é responsável por gerar os artefatos que são servidos pelo lado do servidor, projetado em Flask e também conteinerizado com Docker, assegurando consistência no desenvolvimento, teste e produção.
+This project was developed with the goal of monitoring the water level in urban rivers in real-time, using LoRa technology for data transmission. The solution is containerized, ensuring portability and ease of deployment in different environments.
 
-## Configuração do Ambiente de Desenvolvimento Local
+The front-end is responsible for generating the artifacts that are served by the server-side, designed in Flask and also containerized with Docker, ensuring consistency in development, testing, and production.
 
-Para configurar o ambiente de desenvolvimento local deste projeto, é necessário ter o Node.js e o Docker instalados em seu sistema. Siga as etapas abaixo para instalar dependências, construir o projeto e executar o contêiner:
+## Setting Up the Local Development Environment
 
-1. Clone o repositório para a sua máquina local.
-2. Navegue até o diretório do projeto.
-3. Execute `npm install` para instalar todas as dependências necessárias.
-4. Use `npm start` para iniciar o servidor de desenvolvimento e abrir o aplicativo no seu navegador.
-5. Para gerar artefatos para produção, execute `npm run build`.
-6. Para construir e executar o contêiner do servidor Flask, siga as instruções detalhadas na seção de Docker deste `README`.
+To set up the local development environment for this project, you must have Node.js and Docker installed on your system. Follow the steps below to install dependencies, build the project, and run the container:
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install all necessary dependencies.
+4. Use `npm start` to start the development server and open the application in your browser.
+5. To generate artifacts for production, run `npm run build`.
+6. To build and run the Flask server container, follow the detailed instructions in the Docker section of this `README`.
 
 ## Screenshots
 
-Aqui estão as visões do cliente final deste sistema:
+Here are the end-client views of this system:
 
-### Visão Mobile
-![Visão Mobile](https://i.imgur.com/6Rwb4Tu.png)
+### Mobile View
+![Mobile View](https://i.imgur.com/6Rwb4Tu.png)
 
-### Visão Desktop
-![Visão Desktop](https://i.imgur.com/BMe1sqv.png)
+### Desktop View
+![Desktop View](https://i.imgur.com/BMe1sqv.png)
